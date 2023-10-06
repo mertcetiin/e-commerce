@@ -1,4 +1,5 @@
 import { FaShoppingBag } from 'react-icons/fa';
+import { GrFavorite } from 'react-icons/gr';
 
 function Header() {
     return (
@@ -15,9 +16,9 @@ function Header() {
                 <div className="mr-5 uppercase font-medium">
                     Shop
                 </div>
-                <button className="mr-5 uppercase font-medium">Login</button>
-                <button className="mr-5 uppercase font-medium">Fav</button>
+                <button className="mr-5 uppercase font-medium"><GrFavorite /></button>
                 <button className="mr-5 uppercase font-medium"> <FaShoppingBag /> </button>
+                <button className="mr-5 uppercase font-medium">Login</button>
                 <div className="mr-5 uppercase font-medium">Contact Us</div>
             </div>
         </header>
