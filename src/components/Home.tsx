@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 
 
@@ -75,6 +76,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }
