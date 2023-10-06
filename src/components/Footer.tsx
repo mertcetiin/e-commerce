@@ -79,7 +79,7 @@ function Footer() {
             <div className="bg-gray-100">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                     <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 MertÇetin —
-                        <a href="https://twitter.com/merttcettin" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@mertcetiin</a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mrtctn506@gmail.com" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@mertcetiin</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
 
