@@ -8,12 +8,12 @@ function Header() {
         <header className="text-gray-600 body-font bg-gray-400">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
                 <div className="hover:text-gray-900 font-medium text-3xl font-elephant">
-                    e-Shopp
+                    <Link to='/'>e-Shopp</Link>
                 </div>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                 </nav>
                 <div className="mr-4 uppercase font-medium">
-                    <Link to=''>Home</Link>
+                    <Link to='/'>Home</Link>
                 </div>
                 <div className="mr-16 uppercase font-medium">
                     <Link to='/shop'>Shop</Link>
