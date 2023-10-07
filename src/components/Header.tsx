@@ -16,7 +16,7 @@ function Header() {
                     <Link to=''>Home</Link>
                 </div>
                 <div className="mr-16 uppercase font-medium">
-                    <Link to=''>Shop</Link>
+                    <Link to='/shop'>Shop</Link>
                 </div>
                 <div>
                     <button className="mr-5 top-1 uppercase font-medium relative text-xl">
