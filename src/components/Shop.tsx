@@ -22,7 +22,6 @@ function Shop() {
                                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{item.info}</h3>
                                     <h2 className="text-gray-900 title-font text-lg font-medium">{item.name}</h2>
                                     <p className="mt-1">{item.price}.00</p>
-
                                 </div>
                             </div>
                         ))}

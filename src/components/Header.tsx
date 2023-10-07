@@ -12,10 +12,10 @@ function Header() {
                 </div>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                 </nav>
-                <div className="mr-4 uppercase font-medium">
+                <div className="mr-4 uppercase font-medium hover:text-gray-900">
                     <Link to='/'>Home</Link>
                 </div>
-                <div className="mr-16 uppercase font-medium">
+                <div className="mr-16 uppercase font-medium hover:text-gray-900">
                     <Link to='/shop'>Shop</Link>
                 </div>
                 <div>
@@ -32,8 +32,10 @@ function Header() {
                 </div>
 
 
-                <button className="mr-5 uppercase font-medium text-2xl"><BsFillPersonFill /></button>
-                <div className="mr-5 uppercase font-medium rounded-full p-2 hover:bg-gray-200 cursor-pointer">Contact Us</div>
+                <button className="mr-5 uppercase font-medium text-2xl">
+                    <Link to='/login'><BsFillPersonFill /></Link>
+                </button>
+                {/* <div className="mr-5 uppercase font-medium rounded-full p-2 hover:bg-gray-200 cursor-pointer">Contact Us</div> */}
             </div>
         </header>
     )
