@@ -10,6 +10,7 @@ function Home() {
     return (
         <div>
             <Header />
+
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
 
@@ -34,6 +35,7 @@ function Home() {
 
                 </div>
             </section>
+
             <Footer />
         </div>
     )
