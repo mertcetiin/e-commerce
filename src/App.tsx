@@ -3,6 +3,7 @@ import Home from './components/Home';
 import { Routes, Route } from 'react-router-dom';
 import Shop from './components/Shop';
 import Login from './components/Login';
+import Favorite from './components/Favorite';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/favorite' element={<Favorite />} />
       </Routes>
     </div>
   )

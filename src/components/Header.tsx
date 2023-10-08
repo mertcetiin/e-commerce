@@ -20,7 +20,7 @@ function Header() {
                 </div>
                 <div>
                     <button className="mr-5 top-1 uppercase font-medium relative text-xl">
-                        <GrFavorite />
+                        <Link to='/favorite'><GrFavorite /></Link>
                         <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">0</span>
                     </button>
                 </div>
