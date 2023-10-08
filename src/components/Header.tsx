@@ -3,7 +3,7 @@ import { GrFavorite } from 'react-icons/gr';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ isLikeCounter }: { isLikeCounter: number }) {
     return (
         <header className="text-gray-600 body-font bg-gray-400">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
@@ -21,7 +21,7 @@ function Header() {
                 <div>
                     <button className="mr-5 top-1 uppercase font-medium relative text-xl">
                         <Link to='/favorite'><GrFavorite /></Link>
-                        <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">0</span>
+                        <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">{isLikeCounter}</span>
                     </button>
                 </div>
                 <div>

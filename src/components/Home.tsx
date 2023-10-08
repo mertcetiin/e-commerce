@@ -11,17 +11,25 @@ function Home() {
 
     const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
 
+    const [isLikeCounter, setIsLikeCounter] = useState<number>(0);
+
     const handleIsClicked = (id: number) => {
         setIsClicked((prevIsClicked) => ({
             ...prevIsClicked,
             [id]: !prevIsClicked[id]
         }));
+
+        if (isClicked[id]) {
+            setIsLikeCounter((prevLikeCounter) => prevLikeCounter - 1)
+        } else {
+            setIsLikeCounter((prevLikeCounter) => prevLikeCounter + 1)
+        }
     }
+
 
     return (
         <div>
-            <Header />
-
+            <Header isLikeCounter={isLikeCounter} />
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
 
