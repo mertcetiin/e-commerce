@@ -1,31 +1,10 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import { useState } from 'react';
-import { HomeProducts } from "./Products";
 import { GrFavorite } from 'react-icons/gr';
 import { ProductHome } from "./Products";
 
-function Home() {
 
-    const [homeProducts, setHomeProducts] = useState<ProductHome[]>(HomeProducts);
-
-    const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
-
-    const [isLikeCounter, setIsLikeCounter] = useState<number>(0);
-
-    const handleIsClicked = (id: number) => {
-        setIsClicked((prevIsClicked) => ({
-            ...prevIsClicked,
-            [id]: !prevIsClicked[id]
-        }));
-
-        if (isClicked[id]) {
-            setIsLikeCounter((prevLikeCounter) => prevLikeCounter - 1)
-        } else {
-            setIsLikeCounter((prevLikeCounter) => prevLikeCounter + 1)
-        }
-    }
-
+function Home({ homeProducts, handleIsClicked, isLikeCounter, isClicked }: { homeProducts: ProductHome[], handleIsClicked: (id: number) => void; isLikeCounter: number, isClicked: any; }) {
 
     return (
         <div>

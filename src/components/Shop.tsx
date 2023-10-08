@@ -3,13 +3,13 @@ import Header from "./Header";
 import { useState } from 'react';
 import { ShopProduct } from "./Products";
 
-function Shop() {
+function Shop({ isLikeCounter }: { isLikeCounter: number }) {
 
     const [shopProducts, setShopProducts] = useState(ShopProduct);
 
     return (
         <div>
-            <Header />
+            <Header isLikeCounter={isLikeCounter} />
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
