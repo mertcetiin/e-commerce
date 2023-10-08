@@ -3,10 +3,20 @@ import Header from "./Header";
 import { useState } from 'react';
 import { HomeProducts } from "./Products";
 import { GrFavorite } from 'react-icons/gr';
+import { ProductHome } from "./Products";
 
 function Home() {
 
-    const [homeProducts, sethomeProducts] = useState(HomeProducts);
+    const [homeProducts, setHomeProducts] = useState<ProductHome[]>(HomeProducts);
+
+    const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
+
+    const handleIsClicked = (id: number) => {
+        setIsClicked((prevIsClicked) => ({
+            ...prevIsClicked,
+            [id]: !prevIsClicked[id]
+        }));
+    }
 
     return (
         <div>
@@ -25,7 +35,7 @@ function Home() {
                                 <div className="flex relative">
                                     <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={item.img} />
                                     <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 cursor-pointer">
-                                        <h3 className="float-right -mt-8 text-lg border w-10 ml-3  rounded-full p-2.5"><GrFavorite /></h3>
+                                        <button onClick={() => handleIsClicked(item.id)} className={`float-right -mt-8 text-lg border w-10 ml-3 rounded-full p-2.5 ${isClicked[item.id] ? 'bg-violet-600' : ''}`}><GrFavorite /></button>
                                         <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">NEW</h2>
                                         <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{item.price}</h1>
                                         <p className="leading-relaxed">{item.info}</p>

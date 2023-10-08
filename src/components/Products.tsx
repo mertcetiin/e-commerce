@@ -1,13 +1,13 @@
 import Shirt from '../assets/images/shirt.avif';
 
-type ProductHome = {
+export type ProductHome = {
     id: number;
     img: string;
     price: string;
     info: string;
 }
 
-export let HomeProducts: ProductHome[] = ([
+export const HomeProducts: ProductHome[] = ([
     {
         id: 1,
         img: Shirt,
@@ -47,7 +47,7 @@ export let HomeProducts: ProductHome[] = ([
 ])
 
 
-type ProductShop = {
+export type ProductShop = {
     id: number;
     img: string;
     price: string;
@@ -55,7 +55,7 @@ type ProductShop = {
     info: string;
 }
 
-export let ShopProduct: ProductShop[] = ([
+export const ShopProduct: ProductShop[] = ([
     {
         id: 1,
         img: Shirt,
