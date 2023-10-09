@@ -12,7 +12,7 @@ import { ProductHome } from "./components/Products";
 function App() {
 
 
-  const [homeProducts, setHomeProducts] = useState<ProductHome[]>(HomeProducts);
+  const [homeProducts] = useState<ProductHome[]>(HomeProducts);
 
   const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
 

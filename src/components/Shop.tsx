@@ -5,7 +5,7 @@ import { ShopProduct } from "./Products";
 
 function Shop({ isLikeCounter }: { isLikeCounter: number }) {
 
-    const [shopProducts, setShopProducts] = useState(ShopProduct);
+    const [shopProducts] = useState(ShopProduct);
 
     return (
         <div>
