@@ -76,7 +76,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-100">
+            <div className="bg-gray-200">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                     <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 MertÇetin —
                         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mrtctn506@gmail.com" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@mertcetiin</a>

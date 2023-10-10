@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Header({ isLikeCounter }: { isLikeCounter: number }) {
     return (
-        <header className="text-gray-600 body-font bg-gray-400">
+        <header className="text-gray-600 body-font bg-gray-200">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
                 <div className="hover:text-gray-900 font-medium text-3xl font-elephant">
                     <Link to='/'>e-Shopp</Link>
