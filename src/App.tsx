@@ -37,7 +37,7 @@ function App() {
         <Route path='' element={<Home homeProducts={homeProducts} isClicked={isClicked} isLikeCounter={isLikeCounter} handleIsClicked={handleIsClicked} />} />
         <Route path='/shop' element={<Shop isLikeCounter={isLikeCounter} />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/favorite' element={<Favorite />} />
+        <Route path='/favorite' element={<Favorite homeProducts={homeProducts} />} />
       </Routes>
     </div>
   )
