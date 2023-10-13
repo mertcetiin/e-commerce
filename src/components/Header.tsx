@@ -35,7 +35,6 @@ function Header({ isLikeCounter }: { isLikeCounter: number }) {
                 <button className="mr-5 uppercase font-medium text-2xl">
                     <Link to='/login'><BsFillPersonFill /></Link>
                 </button>
-                {/* <div className="mr-5 uppercase font-medium rounded-full p-2 hover:bg-gray-200 cursor-pointer">Contact Us</div> */}
             </div>
         </header>
     )
