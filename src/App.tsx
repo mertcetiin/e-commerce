@@ -5,14 +5,12 @@ import Shop from './components/Shop';
 import Login from './components/Login';
 import Favorite from './components/Favorite';
 import { useState } from 'react';
-import { HomeProducts } from "./components/Products";
-import { ProductHome } from "./components/Products";
+import { useStore } from './states/store';
 
 
 function App() {
 
-
-  const [homeProducts] = useState<ProductHome[]>(HomeProducts);
+  const homeProducts = useStore((state) => state.homeProducts)
 
   const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
 
