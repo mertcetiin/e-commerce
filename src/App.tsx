@@ -11,6 +11,7 @@ import { useStore } from './states/store';
 function App() {
 
   const homeProducts = useStore((state) => state.homeProducts)
+  const shopProducts = useStore((state) => state.shopProducts)
 
   const [isClicked, setIsClicked] = useState<{ [key: number]: boolean }>({});
 
@@ -33,7 +34,7 @@ function App() {
     <div>
       <Routes>
         <Route path='' element={<Home homeProducts={homeProducts} isClicked={isClicked} isLikeCounter={isLikeCounter} handleIsClicked={handleIsClicked} />} />
-        <Route path='/shop' element={<Shop isLikeCounter={isLikeCounter} />} />
+        <Route path='/shop' element={<Shop isLikeCounter={isLikeCounter} shopProducts={shopProducts} />} />
         <Route path='/login' element={<Login />} />
         <Route path='/favorite' element={<Favorite homeProducts={homeProducts} />} />
       </Routes>

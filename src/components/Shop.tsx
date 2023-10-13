@@ -1,13 +1,10 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import { useState } from 'react';
-import { ShopProduct } from "./Products";
 import { GrFavorite } from 'react-icons/gr';
 import { FaShoppingBag } from "react-icons/fa";
+import { ProductShop } from "./Products";
 
-function Shop({ isLikeCounter }: { isLikeCounter: number }) {
-
-    const [shopProducts] = useState(ShopProduct);
+function Shop({ isLikeCounter, shopProducts }: { isLikeCounter: number, shopProducts: ProductShop[] }) {
 
     return (
         <div>
