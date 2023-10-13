@@ -6,7 +6,7 @@ function Favorite({ homeProducts }: { homeProducts: ProductHome[], }) {
 
             <div className="container px-5 py-20 mx-auto">
                 {homeProducts.map((item) => (
-                    <div key={item.id} className="lg:w-4/5 mx-auto flex flex-wrap">
+                    <div key={item.id} className="lg:w-4/5 mx-auto flex flex-wrap">cle
                         <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={item.img} />
                         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                             <h2 className="text-sm title-font text-gray-500 tracking-widest">Clothes</h2>
