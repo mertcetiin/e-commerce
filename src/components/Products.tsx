@@ -6,6 +6,7 @@ export type ProductHome = {
     price: string;
     name: string;
     info: string;
+    isFavorite: boolean;
 }
 
 export const HomeProducts: ProductHome[] = ([
@@ -15,6 +16,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
     {
         id: 2,
@@ -22,6 +24,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
     {
         id: 3,
@@ -29,6 +32,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
     {
         id: 4,
@@ -36,6 +40,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
     {
         id: 5,
@@ -43,6 +48,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
     {
         id: 6,
@@ -50,6 +56,7 @@ export const HomeProducts: ProductHome[] = ([
         price: '$10',
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        isFavorite: false,
     },
 ])
 

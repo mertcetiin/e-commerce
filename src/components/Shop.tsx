@@ -4,11 +4,11 @@ import { GrFavorite } from 'react-icons/gr';
 import { FaShoppingBag } from "react-icons/fa";
 import { ProductShop } from "./Products";
 
-function Shop({ isLikeCounter, shopProducts }: { isLikeCounter: number, shopProducts: ProductShop[] }) {
+function Shop() {
 
     return (
         <div>
-            <Header isLikeCounter={isLikeCounter} />
+            <Header />
             <section className="text-gray-600 body-font bg-gray-200">
                 <h1 className="sm:text-3xl text-center -mb-10 text-2xl font-medium title-font text-gray-600">Clothes</h1>
                 <div className="container px-5 py-24 mx-auto">

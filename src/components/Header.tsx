@@ -2,8 +2,12 @@ import { FaShoppingBag } from 'react-icons/fa';
 import { GrFavorite } from 'react-icons/gr';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { useStore } from '../states/store';
 
-function Header({ isLikeCounter }: { isLikeCounter: number }) {
+function Header() {
+
+    const isLikeCounter = useStore((state) => state.isLikeCounter)
+
     return (
         <header className="text-gray-600 body-font bg-gray-200">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
