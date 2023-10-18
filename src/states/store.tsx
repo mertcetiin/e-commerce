@@ -7,7 +7,9 @@ interface ProductState {
     isLikeCounter: number
     favorite: any[];
     handleLikeClick: (name: string, price: string, img: string, id: number) => void
+    shopLikeClick: (name: string, price: string, img: string, id: number) => void
     setFavorite: (id: number, isFavorite: boolean) => void;
+    shopFavorite: (id: number, isFavorite: boolean) => void;
     clearFavorite: (id: number) => void;
 }
 
@@ -45,6 +47,34 @@ export const useStore = create<ProductState>()((set) => ({
             }
         }),
 
+    shopLikeClick: (name, price, img, id) =>
+        set((state) => {
+            const updatedShopState = state.shopState.map((item) => {
+                if (item.id === id) {
+                    const isFavorite = !item.isFavorite;
+                    return { ...item, isFavorite };
+                }
+                return item;
+            });
+
+            const selectedProduct = updatedShopState.find((item) => item.id === id);
+
+            if (selectedProduct && selectedProduct.isFavorite) {
+                return {
+                    isLikeCounter: state.isLikeCounter + 1,
+                    favorite: [...state.favorite, { name, price, img, id }],
+                    shopState: updatedShopState,
+                };
+            } else {
+                const updatedFavorite = state.favorite.filter((item) => item.id !== id);
+                return {
+                    isLikeCounter: state.isLikeCounter - 1,
+                    favorite: updatedFavorite,
+                    shopState: updatedShopState,
+                };
+            }
+        }),
+
     setFavorite: (id, isFavorite) =>
         set((state) => {
             const updatedHomeState = state.homeState.map((item) => {
@@ -56,6 +86,19 @@ export const useStore = create<ProductState>()((set) => ({
             return {
                 homeState: updatedHomeState,
             };
+        }),
+
+    shopFavorite: (id, isFavorite) =>
+        set((state) => {
+            const updatedShopState = state.shopState.map((item) => {
+                if (item.id === id) {
+                    return { ...item, isFavorite };
+                }
+                return item;
+            });
+            return {
+                shopState: updatedShopState,
+            }
         }),
 
     clearFavorite: (id) =>

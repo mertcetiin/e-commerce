@@ -7,8 +7,8 @@ import { useStore } from "../states/store";
 function Shop() {
 
     const shopState = useStore((state) => state.shopState)
-    const handleLikeClick = useStore((state) => state.handleLikeClick)
-    const setFavorite = useStore((state) => state.setFavorite)
+    const shopLikeClick = useStore((state) => state.shopLikeClick)
+    const shopFavorite = useStore((state) => state.shopFavorite)
 
     return (
         <div>
@@ -24,8 +24,8 @@ function Shop() {
                                         <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={item.img} />
                                         <div className="overlay absolute bottom-0 left-0 w-full h-12 bg-white opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
                                             <button onClick={() => {
-                                                handleLikeClick(item.name, item.price, item.img, item.id)
-                                                setFavorite(item.id, !item.isFavorite);
+                                                shopLikeClick(item.name, item.price, item.img, item.id);
+                                                shopFavorite(item.id, !item.isFavorite);
                                             }} className={`ml-0 cursor-pointer border p-2.5 rounded-full ${item.isFavorite ? 'bg-gray-400' : 'white'} text-${item.isFavorite ? 'white' : 'black'}`}>
                                                 <GrFavorite />
                                             </button>

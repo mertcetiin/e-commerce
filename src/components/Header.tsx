@@ -34,8 +34,6 @@ function Header() {
                         <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">0</span>
                     </button>
                 </div>
-
-
                 <button className="mr-5 uppercase font-medium text-2xl">
                     <Link to='/login'><BsFillPersonFill /></Link>
                 </button>
