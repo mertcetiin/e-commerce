@@ -10,7 +10,6 @@ function Home() {
     const handleLikeClick = useStore((state) => state.handleLikeClick)
     const setFavorite = useStore((state) => state.setFavorite)
 
-
     return (
         <div>
             <Header />

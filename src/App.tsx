@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Shop from './components/Shop';
 import Login from './components/Login';
 import Favorite from './components/Favorite';
+import Basket from './components/Basket';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/shop' element={<Shop />} />
         <Route path='/login' element={<Login />} />
         <Route path='/favorite' element={<Favorite />} />
+        <Route path='/basket' element={<Basket />} />
       </Routes>
     </div>
   )

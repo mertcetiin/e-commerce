@@ -66,6 +66,7 @@ export type ProductShop = {
     img: string;
     price: string;
     name: string;
+    isFavorite: boolean;
 }
 
 export const ShopProduct: ProductShop[] = ([
@@ -74,71 +75,83 @@ export const ShopProduct: ProductShop[] = ([
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 2,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 3,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 4,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 5,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 6,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 7,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 8,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 9,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 10,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 11,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
     {
         id: 12,
         img: Shirt,
         price: '$15',
         name: 'Shirt',
+        isFavorite: false,
     },
 ])
