@@ -59,17 +59,24 @@ function Favorite() {
                                         </svg>
                                     </button>
                                 </div>
+
                             </div>
                         </div>
-                    )) : (<div>
-                        <button>
-                            <Link to='/shop'>Continue Shopping</Link>
-                        </button>
-                        <h1>Ürün Yok</h1>
-                    </div>)}
+
+                    )) : (
+
+                        <div className="w-full text-center mt-48 p-4">
+                            <h3 className="text-3xl text-gray-600 font-medium mb-4">No product in your favorites.</h3>
+                            <Link to='/shop' className="text-white bg-gray-500 hover:bg-gray-800 rounded-full py-2 px-6 text-lg font-medium transition duration-300">
+                                Start Shopping
+                            </Link>
+                        </div>
+
+                    )}
                 </div>
             </div>
         </section>
+
     )
 }
 
