@@ -31,7 +31,7 @@ export const useStore = create<ProductState>()((set) => ({
 
             if (selectedProduct && selectedProduct.isFavorite) {
                 return {
-                    count: state.isLikeCounter + 1,
+                    isLikeCounter: state.isLikeCounter + 1,
                     favorite: [...state.favorite, { name, price, img, id }],
                     homeState: updatedHomeState,
                 };
