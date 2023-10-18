@@ -3,7 +3,7 @@ import { HomeProducts, ProductHome, ProductShop, ShopProduct } from "../componen
 
 interface ProductState {
     homeState: ProductHome[]
-    shopProducts: ProductShop[]
+    shopState: ProductShop[]
     isLikeCounter: number
     favorite: any[];
     handleLikeClick: (name: string, price: string, img: string, id: number) => void
@@ -13,7 +13,7 @@ interface ProductState {
 
 export const useStore = create<ProductState>()((set) => ({
     homeState: HomeProducts,
-    shopProducts: ShopProduct,
+    shopState: ShopProduct,
     isLikeCounter: 0,
     favorite: [],
 

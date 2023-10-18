@@ -2,9 +2,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { GrFavorite } from 'react-icons/gr';
 import { FaShoppingBag } from "react-icons/fa";
-import { ProductShop } from "./Products";
+import { useStore } from "../states/store";
 
 function Shop() {
+
+    const shopState = useStore((state) => state.shopState)
 
     return (
         <div>
@@ -13,8 +15,7 @@ function Shop() {
                 <h1 className="sm:text-3xl text-center -mb-10 text-2xl font-medium title-font text-gray-600">Clothes</h1>
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
-
-                        {shopProducts.map((item) => (
+                        {shopState.map((item) => (
                             <div key={item.id} className="lg:w-1/4 md:w-1/2 p-4 w-full">
                                 <div className="relative group">
                                     <a className="block relative h-48 rounded overflow-hidden">
@@ -34,12 +35,10 @@ function Shop() {
                             </div>
                         ))}
 
-
                     </div>
 
                 </div>
             </section>
-
             <Footer />
         </div>
     )
