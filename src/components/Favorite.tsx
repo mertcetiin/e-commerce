@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useStore } from '../states/store';
 
 function Favorite() {
@@ -8,7 +9,7 @@ function Favorite() {
         <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-20 mx-auto">
                 <div className="flex flex-wrap -m-4">
-                    {homeState.map((item) => (
+                    {homeState.length > 0 ? homeState.map((item) => (
                         <div key={item.id} className="p-4 lg:w-1/2">
                             <img alt="ecommerce" className="w-full h-72 lg:h-72 object-cover object-center rounded" src={item.img} />
                             <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -60,7 +61,12 @@ function Favorite() {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    )) : (<div>
+                        <button>
+                            <Link to='/shop'>Continue Shopping</Link>
+                        </button>
+                        <h1>Ürün Yok</h1>
+                    </div>)}
                 </div>
             </div>
         </section>
