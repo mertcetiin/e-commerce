@@ -7,6 +7,7 @@ import { useStore } from '../states/store';
 function Header() {
 
     const isLikeCounter = useStore((state) => state.isLikeCounter)
+    const isBasketCounter = useStore((state) => state.isBasketCounter)
 
     return (
         <header className="text-gray-600 body-font bg-gray-200">
@@ -31,7 +32,7 @@ function Header() {
                 <div>
                     <button className="mr-5 top-1 uppercase font-medium relative text-xl">
                         <Link to='/basket'> <FaShoppingBag /></Link>
-                        <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">0</span>
+                        <span className="absolute -top-4 -right-4 bg-gray-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-sm font-bold">{isBasketCounter}</span>
                     </button>
                 </div>
                 <button className="mr-5 uppercase font-medium text-2xl">

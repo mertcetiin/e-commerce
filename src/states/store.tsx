@@ -5,6 +5,7 @@ interface ProductState {
     homeState: ProductHome[]
     shopState: ProductShop[]
     isLikeCounter: number
+    isBasketCounter: number
     favorite: any[];
     handleLikeClick: (name: string, price: string, img: string, id: number) => void
     shopLikeClick: (name: string, price: string, img: string, id: number) => void
@@ -17,6 +18,7 @@ export const useStore = create<ProductState>()((set) => ({
     homeState: HomeProducts,
     shopState: ShopProduct,
     isLikeCounter: 0,
+    isBasketCounter: 0,
     favorite: [],
 
     handleLikeClick: (name, price, img, id) =>
