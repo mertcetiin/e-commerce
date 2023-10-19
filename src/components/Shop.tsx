@@ -10,6 +10,8 @@ function Shop() {
     const shopLikeClick = useStore((state) => state.shopLikeClick)
     const shopFavorite = useStore((state) => state.shopFavorite)
 
+    const handleBasketClick = useStore((state) => state.handleBasketClick)
+
     return (
         <div>
             <Header />
@@ -29,7 +31,9 @@ function Shop() {
                                             }} className={`ml-0 cursor-pointer border p-2.5 rounded-full ${item.isFavorite ? 'bg-gray-400' : 'white'} text-${item.isFavorite ? 'white' : 'black'}`}>
                                                 <GrFavorite />
                                             </button>
-                                            <button className="ml-20 cursor-pointer border p-2.5 rounded-full">
+                                            <button onClick={() => {
+                                                handleBasketClick(item.name, item.price, item.id)
+                                            }} className="ml-20 cursor-pointer border p-2.5 rounded-full">
                                                 <FaShoppingBag />
                                             </button>
                                         </div>

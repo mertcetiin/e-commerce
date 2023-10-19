@@ -7,10 +7,12 @@ interface ProductState {
     isLikeCounter: number
     isBasketCounter: number
     favorite: any[];
+    basket: any[];
     handleLikeClick: (name: string, price: string, img: string, id: number) => void
     shopLikeClick: (name: string, price: string, img: string, id: number) => void
     setFavorite: (id: number, isFavorite: boolean) => void;
     shopFavorite: (id: number, isFavorite: boolean) => void;
+    handleBasketClick: (name: string, price: string, id: number) => void
     clearFavorite: (id: number) => void;
 }
 
@@ -20,6 +22,7 @@ export const useStore = create<ProductState>()((set) => ({
     isLikeCounter: 0,
     isBasketCounter: 0,
     favorite: [],
+    basket: [],
 
     handleLikeClick: (name, price, img, id) =>
         set((state) => {
@@ -74,6 +77,33 @@ export const useStore = create<ProductState>()((set) => ({
                     favorite: updatedFavorite,
                     shopState: updatedShopState,
                 };
+            }
+        }),
+
+    handleBasketClick: (name, price, id) =>
+        set((state) => {
+            const updatedBasketState = state.shopState.map((item) => {
+                if (item.id === id) {
+                    const isBasket = !item.isBasket;
+                    return { ...item, isBasket }
+                }
+                return item;
+            });
+            const selectedShopProduct = updatedBasketState.find((item) => item.id === id);
+
+            if (selectedShopProduct && selectedShopProduct.isBasket) {
+                return {
+                    isBasketCounter: state.isBasketCounter + 1,
+                    basket: [...state.basket, { name, price, id }],
+                    shopState: updatedBasketState,
+                };
+            } else {
+                const updatedBasket = state.basket.filter((item) => item.id !== id);
+                return {
+                    isBasketCounter: state.isBasketCounter - 1,
+                    basket: updatedBasket,
+                    shopState: updatedBasketState,
+                }
             }
         }),
 

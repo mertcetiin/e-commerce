@@ -67,6 +67,7 @@ export type ProductShop = {
     price: string;
     name: string;
     isFavorite: boolean;
+    isBasket: boolean;
 }
 
 export const ShopProduct: ProductShop[] = ([
@@ -76,6 +77,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 2,
@@ -83,6 +85,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 3,
@@ -90,6 +93,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 4,
@@ -97,6 +101,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 5,
@@ -104,6 +109,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 6,
@@ -111,6 +117,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 7,
@@ -118,6 +125,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 8,
@@ -125,6 +133,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 9,
@@ -132,6 +141,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 10,
@@ -139,6 +149,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 11,
@@ -146,6 +157,7 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
     {
         id: 12,
@@ -153,5 +165,6 @@ export const ShopProduct: ProductShop[] = ([
         price: '$15',
         name: 'Shirt',
         isFavorite: false,
+        isBasket: false,
     },
 ])
