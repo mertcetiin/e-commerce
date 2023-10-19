@@ -11,6 +11,7 @@ function Shop() {
     const shopFavorite = useStore((state) => state.shopFavorite)
 
     const handleBasketClick = useStore((state) => state.handleBasketClick)
+    const shopBasket = useStore((state) => state.shopBasket)
 
     return (
         <div>
@@ -33,7 +34,8 @@ function Shop() {
                                             </button>
                                             <button onClick={() => {
                                                 handleBasketClick(item.name, item.price, item.id)
-                                            }} className="ml-20 cursor-pointer border p-2.5 rounded-full">
+                                                shopBasket(item.id, !item.isBasket)
+                                            }} className={`ml-20 cursor-pointer border p-2.5 rounded-full  ${item.isBasket ? 'bg-gray-400' : 'white'} text-${item.isBasket ? 'white' : 'black'}`}>
                                                 <FaShoppingBag />
                                             </button>
                                         </div>

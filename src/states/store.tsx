@@ -13,6 +13,7 @@ interface ProductState {
     setFavorite: (id: number, isFavorite: boolean) => void;
     shopFavorite: (id: number, isFavorite: boolean) => void;
     handleBasketClick: (name: string, price: string, id: number) => void
+    shopBasket: (id: number, isFavorite: boolean) => void;
     clearFavorite: (id: number) => void;
 }
 
@@ -130,6 +131,19 @@ export const useStore = create<ProductState>()((set) => ({
             });
             return {
                 shopState: updatedShopState,
+            }
+        }),
+
+    shopBasket: (id, isBasket) =>
+        set((state) => {
+            const updatedShopBasketState = state.shopState.map((item) => {
+                if (item.id === id) {
+                    return { ...item, isBasket };
+                }
+                return item;
+            });
+            return {
+                shopState: updatedShopBasketState,
             }
         }),
 
