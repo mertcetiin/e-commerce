@@ -33,7 +33,7 @@ function Shop() {
                                                 <GrFavorite />
                                             </button>
                                             <button onClick={() => {
-                                                handleBasketClick(item.name, item.price, item.id)
+                                                handleBasketClick(item.name, item.price, item.img, item.id)
                                                 shopBasket(item.id, !item.isBasket)
                                             }} className={`ml-20 cursor-pointer border p-2.5 rounded-full  ${item.isBasket ? 'bg-gray-400' : 'white'} text-${item.isBasket ? 'white' : 'black'}`}>
                                                 <FaShoppingBag />
