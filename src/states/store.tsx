@@ -17,7 +17,7 @@ interface ProductState {
     clearFavorite: (id: number) => void;
 
     isPriceCounter: number;
-
+    // handleTotalPrice: (price: number) => void;
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -29,6 +29,10 @@ export const useStore = create<ProductState>()((set) => ({
     basket: [],
     isPriceCounter: 0,
 
+    // handleTotalPrice: (price)=> 
+    // set((state)=> {
+
+    // })
 
     handleLikeClick: (name, price, img, id) =>
         set((state) => {

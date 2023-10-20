@@ -29,7 +29,7 @@ function Basket() {
                         </button>
                     </div>
                     <div>
-                        <p className="text-lg font-semibold text-primary-500">{item.price}</p>
+                        <p className="text-lg font-semibold text-primary-500">${item.price}.00</p>
                     </div>
                 </div>
             )) :
