@@ -8,15 +8,16 @@ interface ProductState {
     isBasketCounter: number
     favorite: any[];
     basket: any[];
-    handleLikeClick: (name: string, price: string, img: string, id: number) => void
-    shopLikeClick: (name: string, price: string, img: string, id: number) => void
+    handleLikeClick: (name: string, price: number, img: string, id: number) => void
+    shopLikeClick: (name: string, price: number, img: string, id: number) => void
     setFavorite: (id: number, isFavorite: boolean) => void;
     shopFavorite: (id: number, isFavorite: boolean) => void;
-    handleBasketClick: (name: string, price: string, img: string, id: number) => void
+    handleBasketClick: (name: string, price: number, img: string, id: number) => void
     shopBasket: (id: number, isFavorite: boolean) => void;
     clearFavorite: (id: number) => void;
 
-    isPriceCounter: number
+    isPriceCounter: number;
+
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -27,6 +28,7 @@ export const useStore = create<ProductState>()((set) => ({
     favorite: [],
     basket: [],
     isPriceCounter: 0,
+
 
     handleLikeClick: (name, price, img, id) =>
         set((state) => {

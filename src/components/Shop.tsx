@@ -42,7 +42,7 @@ function Shop() {
                                     </a>
                                 </div>
                                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{item.name}</h3>
-                                <h2 className="text-gray-900 title-font text-lg font-medium">{item.price}.00</h2>
+                                <h2 className="text-gray-900 title-font text-lg font-medium">${item.price}.00</h2>
                             </div>
                         ))}
 
