@@ -15,6 +15,8 @@ interface ProductState {
     handleBasketClick: (name: string, price: string, img: string, id: number) => void
     shopBasket: (id: number, isFavorite: boolean) => void;
     clearFavorite: (id: number) => void;
+
+    isPriceCounter: number
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -24,6 +26,7 @@ export const useStore = create<ProductState>()((set) => ({
     isBasketCounter: 0,
     favorite: [],
     basket: [],
+    isPriceCounter: 0,
 
     handleLikeClick: (name, price, img, id) =>
         set((state) => {

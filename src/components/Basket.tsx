@@ -4,11 +4,13 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
 
 function Basket() {
+
     const shopState = useStore((state) => state.basket);
+    const isPriceCounter = useStore((state) => state.isPriceCounter);
 
     return (
         <div className="container mx-auto p-4">
-            {shopState.map((item) => (
+            {shopState.length > 0 ? shopState.map((item) => (
                 <div key={item.id} className="flex items-center justify-between py-4 border-b border-gray-300">
                     <div className="flex items-center space-x-4">
                         <img src={item.img} alt={item.name} className="w-16 h-16 object-cover rounded" />
@@ -21,7 +23,7 @@ function Basket() {
                         <button type="button" className="rounded-full p-2 bg-gray-200">
                             <AiOutlineMinus />
                         </button>
-                        <span className="text-lg font-semibold">0</span>
+                        <span className="text-lg font-semibold">1</span>
                         <button type="button" className="rounded-full p-2 bg-gray-200">
                             <AiOutlinePlus />
                         </button>
@@ -30,13 +32,18 @@ function Basket() {
                         <p className="text-lg font-semibold text-primary-500">{item.price}</p>
                     </div>
                 </div>
-            ))}
-            <div className="flex justify-between items-center py-4">
-                <Link to='/shop' className="text-primary-500 hover:underline">Continue Shopping</Link>
-                <div>
-                    <p className="text-lg font-semibold">Total Price: 0</p>
+            )) :
+                <div className="w-full text-center mt-48 p-4">
+                    <h3 className="text-3xl text-gray-600 font-medium mb-4">You have no items in your basket!</h3>
+                    <Link to='/shop' className="text-white bg-gray-500 hover:bg-gray-800 rounded-full py-2 px-6 text-lg font-medium transition duration-300">
+                        Continue Shopping
+                    </Link>
                 </div>
-            </div>
+            }
+            {shopState.length > 0 ? <div className="flex justify-between items-center py-4">
+                <Link to='/shop' className="text-primary-500 hover:underline">Continue Shopping</Link>
+                <p className="text-lg font-semibold">Total Price: ${isPriceCounter}</p>
+            </div> : ''}
         </div>
     );
 }
