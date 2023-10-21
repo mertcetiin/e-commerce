@@ -29,10 +29,11 @@ export const useStore = create<ProductState>()((set) => ({
     basket: [],
     isPriceCounter: 0,
 
-    // handleTotalPrice: (price)=> 
-    // set((state)=> {
-
-    // })
+    // handleTotalPrice: (price) =>
+    //     set((state) => {
+    // }
+    //         })
+    //     }),
 
     handleLikeClick: (name, price, img, id) =>
         set((state) => {

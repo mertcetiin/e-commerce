@@ -3,7 +3,7 @@ import Shirt from '../assets/images/shirt.avif';
 export type ProductHome = {
     id: number;
     img: string;
-    price: string;
+    price: number;
     name: string;
     info: string;
     isFavorite: boolean;
@@ -13,7 +13,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 1,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
@@ -21,7 +21,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 2,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
@@ -29,7 +29,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 3,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
@@ -37,7 +37,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 4,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
@@ -45,7 +45,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 5,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
@@ -53,7 +53,7 @@ export const HomeProducts: ProductHome[] = ([
     {
         id: 6,
         img: Shirt,
-        price: '$10',
+        price: 10,
         name: 'Shirt',
         info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         isFavorite: false,
