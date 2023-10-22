@@ -37,6 +37,7 @@ function Shop() {
                                                 handleBasketClick(item.name, item.price, item.img, item.id)
                                                 shopBasket(item.id, !item.isBasket)
                                                 increase(item.id, item.price)
+
                                             }} className={`ml-20 cursor-pointer border p-2.5 rounded-full  ${item.isBasket ? 'bg-gray-400' : 'white'} text-${item.isBasket ? 'white' : 'black'}`}>
                                                 <FaShoppingBag />
                                             </button>

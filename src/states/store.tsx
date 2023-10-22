@@ -18,6 +18,7 @@ interface ProductState {
     isPriceCounter: number;
     quantity: { [key: number]: number };
     increase: (id: number, price: number) => void;
+    decrease: (id: number, price: number) => void;
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -36,6 +37,40 @@ export const useStore = create<ProductState>()((set) => ({
             quantity: { ...state.quantity, [id]: (state.quantity[id] || 0) + 1 },
             isPriceCounter: state.isPriceCounter + price,
         })),
+
+    decrease: (id, price) =>
+        set((state) => {
+            const newQuantity = { ...state.quantity };
+            const updatedQuantity = (newQuantity[id] || 0) - 1;
+            const updatedPrice = state.isPriceCounter - price;
+            if (updatedQuantity <= 0) {
+                // Adet 0 veya daha azsa ürünü kaldır
+                delete newQuantity[id];
+
+                // Ürünü sepetten kaldır (istenirse)
+                const updatedBasket = state.basket.filter((item) => item.id !== id);
+
+                // Sepetteki ürün sayacını güncelle
+                const updatedBasketCounter = state.isBasketCounter - 1;
+
+                return {
+                    ...state,
+                    quantity: newQuantity,
+                    isPriceCounter: updatedPrice,
+                    basket: updatedBasket,
+                    isBasketCounter: updatedBasketCounter,
+
+                };
+            } else {
+                newQuantity[id] = updatedQuantity;
+                return {
+                    ...state,
+                    quantity: newQuantity,
+                    isPriceCounter: updatedPrice,
+                };
+            }
+        }),
+
 
 
     handleLikeClick: (name, price, img, id) =>

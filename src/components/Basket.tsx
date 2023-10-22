@@ -9,6 +9,7 @@ function Basket() {
     const isPriceCounter = useStore((state) => state.isPriceCounter);
     const quantity = useStore((state) => state.quantity);
     const increase = useStore((state) => state.increase);
+    const decrease = useStore((state) => state.decrease);
 
     return (
         <div className="container mx-auto p-4">
@@ -18,11 +19,10 @@ function Basket() {
                         <img src={item.img} alt={item.name} className="w-16 h-16 object-cover rounded" />
                         <div>
                             <h4 className="text-xl font-semibold">{item.name}</h4>
-                            <p className="text-gray-500">{item.description}</p>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <button type="button" className="rounded-full p-2 bg-gray-200">
+                        <button type="button" onClick={() => decrease(item.id, item.price)} className="rounded-full p-2 bg-gray-200">
                             <AiOutlineMinus />
                         </button>
                         <span className="text-lg font-semibold">{quantity[item.id]}</span>
