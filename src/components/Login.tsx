@@ -16,7 +16,7 @@ function Login() {
                     </div>
                     <p className="text-sm mb-2">Don't have an account? <Link to='/signup' className="text-blue-500 hover:underline">Sign Up</Link> here</p>
                     <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600" >
-                        Login
+                        <Link to='/shop'>Login</Link>
                     </button>
                 </form>
                 <div className="mt-4 text-sm text-center">
