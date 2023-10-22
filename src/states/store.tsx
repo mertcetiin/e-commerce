@@ -18,6 +18,8 @@ interface ProductState {
 
     isPriceCounter: number;
     totalPrice: (price: number) => void;
+
+    quantity: number
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -28,7 +30,7 @@ export const useStore = create<ProductState>()((set) => ({
     favorite: [],
     basket: [],
     isPriceCounter: 0,
-
+    quantity: 1,
 
     totalPrice: (price) => {
         set((state) => ({
