@@ -35,7 +35,7 @@ function Home() {
                                         ><GrFavorite /></button>
 
                                         <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">NEW</h2>
-                                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{item.price}</h1>
+                                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">${item.price}</h1>
                                         <p className="leading-relaxed">{item.info}</p>
                                     </div>
                                 </div>
