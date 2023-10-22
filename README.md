@@ -1,27 +1,35 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# e-Shopp
 
-Currently, two official plugins are available:
+This project contains an e-commerce application created using React and TypeScript and developed with Zustand, a state management library.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Screenshot
 
-## Expanding the ESLint configuration
+![image](![image](https://github.com/mertcetiin/e-commerce/assets/102957602/bcff4b9a-e103-40e4-8b7e-7d9e6df15fc8)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![image](![image](https://github.com/mertcetiin/e-commerce/assets/102957602/7c0ee8b0-ab12-40ca-b41b-8e57339bed2a)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Project Link
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[Live Demo](https://e-commerce-lac-five.vercel.app)
+
+
+### Installation
+
+1. Clone this repository or download it as a ZIP:
+
+   ```bash
+   cd Desktop/e-ShopApp
+   git clone https://github.com/mertcetiin/e-commerce.git
+
+2. Install dependencies and start the development server:
+
+   ```bash
+   npm install
+   npm create vite@latest .
+   npm install zustand
+   npm install react-router-dom
+   npm install react-icons --save
+   npm run dev
