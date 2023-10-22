@@ -2,24 +2,22 @@ import { create } from "zustand";
 import { HomeProducts, ProductHome, ProductShop, ShopProduct } from "../components/Products";
 
 interface ProductState {
-    homeState: ProductHome[]
-    shopState: ProductShop[]
-    isLikeCounter: number
-    isBasketCounter: number
+    homeState: ProductHome[];
+    shopState: ProductShop[];
+    isLikeCounter: number;
+    isBasketCounter: number;
     favorite: any[];
     basket: any[];
-    handleLikeClick: (name: string, price: number, img: string, id: number) => void
-    shopLikeClick: (name: string, price: number, img: string, id: number) => void
+    handleLikeClick: (name: string, price: number, img: string, id: number) => void;
+    shopLikeClick: (name: string, price: number, img: string, id: number) => void;
     setFavorite: (id: number, isFavorite: boolean) => void;
     shopFavorite: (id: number, isFavorite: boolean) => void;
-    handleBasketClick: (name: string, price: number, img: string, id: number) => void
+    handleBasketClick: (name: string, price: number, img: string, id: number) => void;
     shopBasket: (id: number, isFavorite: boolean) => void;
     clearFavorite: (id: number) => void;
-
     isPriceCounter: number;
-    totalPrice: (price: number) => void;
-
-    quantity: number
+    quantity: { [key: number]: number };
+    increase: (id: number, price: number) => void;
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -30,15 +28,14 @@ export const useStore = create<ProductState>()((set) => ({
     favorite: [],
     basket: [],
     isPriceCounter: 0,
-    quantity: 1,
+    quantity: {},
 
-    totalPrice: (price) => {
+    increase: (id, price) =>
         set((state) => ({
             ...state,
+            quantity: { ...state.quantity, [id]: (state.quantity[id] || 0) + 1 },
             isPriceCounter: state.isPriceCounter + price,
-        }));
-    },
-
+        })),
 
 
     handleLikeClick: (name, price, img, id) =>

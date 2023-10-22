@@ -8,6 +8,7 @@ function Basket() {
     const shopState = useStore((state) => state.basket);
     const isPriceCounter = useStore((state) => state.isPriceCounter);
     const quantity = useStore((state) => state.quantity);
+    const increase = useStore((state) => state.increase);
 
     return (
         <div className="container mx-auto p-4">
@@ -24,8 +25,8 @@ function Basket() {
                         <button type="button" className="rounded-full p-2 bg-gray-200">
                             <AiOutlineMinus />
                         </button>
-                        <span className="text-lg font-semibold">{quantity}</span>
-                        <button type="button" className="rounded-full p-2 bg-gray-200">
+                        <span className="text-lg font-semibold">{quantity[item.id]}</span>
+                        <button type="button" onClick={() => increase(item.id, item.price)} className="rounded-full p-2 bg-gray-200">
                             <AiOutlinePlus />
                         </button>
                     </div>
