@@ -18,7 +18,7 @@ interface ProductState {
     isPriceCounter: number;
     quantity: { [key: number]: number };
     increase: (id: number, price: number) => void;
-    decrease: (id: number, price: number) => void;
+    decrease: (id: number, price: number, isBasket: boolean) => void;
 }
 
 export const useStore = create<ProductState>()((set) => ({
@@ -70,7 +70,6 @@ export const useStore = create<ProductState>()((set) => ({
                 };
             }
         }),
-
 
 
     handleLikeClick: (name, price, img, id) =>

@@ -5,6 +5,7 @@ import Shop from './components/Shop';
 import Login from './components/Login';
 import Favorite from './components/Favorite';
 import Basket from './components/Basket';
+import SignUp from './components/SignUp';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/favorite' element={<Favorite />} />
         <Route path='/basket' element={<Basket />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </div>
   )

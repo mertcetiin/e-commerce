@@ -22,7 +22,7 @@ function Basket() {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <button type="button" onClick={() => decrease(item.id, item.price)} className="rounded-full p-2 bg-gray-200">
+                        <button type="button" onClick={() => decrease(item.id, item.price, item.isBasket)} className="rounded-full p-2 bg-gray-200">
                             <AiOutlineMinus />
                         </button>
                         <span className="text-lg font-semibold">{quantity[item.id]}</span>
