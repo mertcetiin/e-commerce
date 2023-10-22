@@ -42,7 +42,7 @@ function Basket() {
             }
             {shopState.length > 0 ? <div className="flex justify-between items-center py-4">
                 <Link to='/shop' className="text-primary-500 hover:underline">Continue Shopping</Link>
-                <p className="text-lg font-semibold">Total Price: ${isPriceCounter}</p>
+                <p className="text-lg font-semibold">Total Price: ${isPriceCounter.toFixed(2)}</p>
             </div> : ''}
         </div>
     );
