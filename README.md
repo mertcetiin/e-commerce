@@ -6,9 +6,9 @@ This project contains an e-commerce application created using React and TypeScri
 
 ## Project Screenshot
 
-![image](![image](https://github.com/mertcetiin/e-commerce/assets/102957602/bcff4b9a-e103-40e4-8b7e-7d9e6df15fc8)
+![image](https://github.com/mertcetiin/e-commerce/assets/102957602/bcff4b9a-e103-40e4-8b7e-7d9e6df15fc8)
 
-![image](![image](https://github.com/mertcetiin/e-commerce/assets/102957602/7c0ee8b0-ab12-40ca-b41b-8e57339bed2a)
+![image](https://github.com/mertcetiin/e-commerce/assets/102957602/7c0ee8b0-ab12-40ca-b41b-8e57339bed2a)
 
 
 ## Project Link
