@@ -2,7 +2,7 @@
 
 # e-Shopp
 
-This project contains an e-commerce application created using React and TypeScript and developed with Zustand, a state management library.
+This project encompasses a shopping website application. Users can add products found on the site to their favorites, place them in the shopping cart, and adjust the quantities of items in their carts. Additionally, they can view the total price of the items in their carts.
 
 ## Project Screenshot
 
